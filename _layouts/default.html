@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | default: site.title | escape }}</title>
     <style>
-      :root { color-scheme: light; font-family: Georgia, serif; color: #202b2b; background: #f5f7f5; }
+      :root { color-scheme: light; font-family: Georgia, serif; color: #252a30; background: #f6f7f8; }
       * { box-sizing: border-box; }
       body { margin: 0; }
-      .site-header { background: #173d3a; color: #fff; border-bottom: 5px solid #d5ae57; }
-      .site-header-inner { max-width: 1080px; margin: auto; padding: 18px 24px; font: 700 13px/1.4 sans-serif; text-transform: uppercase; }
-      main { max-width: 1080px; margin: auto; padding: 64px 24px 96px; }
-      h1 { max-width: 850px; margin: 0 0 56px; font-size: 3.75rem; line-height: 1.15; }
-      h2 { margin: 0 0 24px; padding-bottom: 16px; border-bottom: 1px solid #aebfba; font-size: 1.75rem; }
-      h3 { margin: 0; padding: 22px 0; border-bottom: 1px solid #d6dfdb; font: 600 1.1rem/1.4 sans-serif; }
-      a { color: #12675e; }
-      @media (max-width: 600px) { main { padding-top: 40px; } h1 { margin-bottom: 40px; font-size: 2rem; } }
+      .site-header { background: #2F6195; color: #fff; }
+      .site-header-inner { max-width: 1080px; margin: auto; padding: 8px 24px; display: flex; align-items: center; gap: 16px; font: 700 13px/1.4 sans-serif;  }
+      .site-logo { width: 56px; height: 56px; flex: none; object-fit: contain; }
+      .site-header-text { min-width: 0; overflow-wrap: anywhere; }
+      .site-header-text span { display: block; }
+      main { max-width: 1080px; margin: auto; padding: 20px 24px 96px; }
+      h1 { max-width: 650px; margin: 0 0 20px; font-size: 1.75rem; line-height: 1.15; }
+      h2 { margin: 0 0 0; padding-bottom: 16px; border-bottom: 1px solid #b8c2cc; font-size: 1.5rem; }
+      h3 { margin: 0; padding: 22px 0; border-bottom: 1px solid #d8dde2; font: 600 1.1rem/1.4 sans-serif; }
+      h2 + h3 { padding-top: 10px; }
+      table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+      th, td { padding: 12px 8px; border-bottom: 1px solid #d8dde2; text-align: left; overflow-wrap: anywhere; }
+      th:nth-child(2), td:nth-child(2) { width: 25%; text-align: center; }
+      a { color: #2F6195; }
+      @media (max-width: 600px) { .site-header-inner { padding: 8px 16px; gap: 12px; } main { padding: 16px 16px 96px; } h1 { margin-bottom: 20px; font-size: 1.625rem; overflow-wrap: anywhere; } }
     </style>
   </head>
   <body>
     <header class="site-header">
-      <div class="site-header-inner">Coordinación académica</div>
+      <div class="site-header-inner">
+        <img class="site-logo" src="{{ '/assets/logo-ual.png' | relative_url }}" alt="">
+        <div class="site-header-text">
+          <span>Escuela Superior de Ingeniería</span>
+          <span>Universidad de Almería</span>
+        </div>
+      </div>
     </header>
     <main>
       {{ content }}
