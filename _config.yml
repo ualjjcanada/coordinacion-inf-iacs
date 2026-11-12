@@ -1,0 +1,11 @@
+title: Coordinacion de Ingeniería Infomática e Ingeligencia Artificial y Ciberseguridad
+url: https://ualjjcanada.github.io
+baseurl: /coordinacion-inf-iacs
+destination: docs
+include:
+  - .nojekyll
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
