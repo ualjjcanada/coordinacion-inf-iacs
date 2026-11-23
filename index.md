@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Coordinacion de Ingeniería Infomática e Ingeligencia Artificial y Ciberseguridad. 
+# Coordinación de Ingeniería Infomática e Inteligencia Artificial y Ciberseguridad. 
 
 ## Primer curso - 2026-27
 
